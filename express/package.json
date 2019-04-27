@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server"
+    "start": "nodemon ./server",
+    "start:debug": "node --inspect-brk ./server"
   },
   "author": "",
   "license": "ISC",

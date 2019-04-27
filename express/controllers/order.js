@@ -1,12 +1,17 @@
-function listOrders(req, res) {
-  const orderId = req.params.id;
-  console.log(orderId);
-  res.json({ order: 'Test' });  
+function listOrders(req, res, next) {
+  try {
+    const orderId = req.params.id;
+    console.log(req.request_id + ': Inside listOrders');
+    res.json({ order: 'Test' });  
+  } catch (error) {
+    next(error);
+  }
 }
 
-function createOrder(req, res) {
+function createOrder(req, res, next) {
   console.log(req.body);
   res.json({ order: 'Test' });
+  next();
 }
 
 function deleteOrder(req, res) {

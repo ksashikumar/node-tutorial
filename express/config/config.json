@@ -1,0 +1,9 @@
+{
+  "github": {
+    "secret_token": "asdf",
+    "api_token": "asd"
+  },
+  "google": {
+    "api_key": "asdf"
+  }
+}
