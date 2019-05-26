@@ -1,4 +1,5 @@
 require('./models/connector');
+require('./models/mongo-connector');
 
 const express = require('express');
 const routes = require('./routes');

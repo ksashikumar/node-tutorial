@@ -1,7 +1,8 @@
 function listOrders(req, res, next) {
   try {
     const orderId = req.params.id;
-    console.log(req.request_id + ': Inside listOrders');
+    console.log(req.query);
+    // console.log(req.request_id + ': Inside listOrders');
     res.json({ order: 'Test' });  
   } catch (error) {
     next(error);

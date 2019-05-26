@@ -5,24 +5,27 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const order = require('./routes/order');
 
-
 const addRequestId = require('./middlewares/add-request-id');
 const requestLogger = require('./middlewares/request-logger');
 
 const errorHandler = require('./middlewares/error-handler');
 
 const app = express();
+const mount = express();
+
+console.log(app.mountPath);
+console.log(mount.mountPath);
 
 app.set('x-powered-by', false);
 
 app.use([addRequestId, requestLogger]);
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
 
 app.use('/api/', order);
 
-app.use(errorHandler);
+// app.use(errorHandler);
 
 app.listen(process.env.PORT, () => {
   console.log('Application Started');

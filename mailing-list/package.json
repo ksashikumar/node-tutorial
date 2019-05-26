@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "mongoose": "^5.5.11",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.6"
   }
